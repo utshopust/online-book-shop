@@ -1,0 +1,25 @@
+#include "bits/stdc++.h"
+using namespace std;
+
+int main()
+{
+   string s,k,ans;
+   getline(cin,s);
+   bool fl=0;
+   for(int i=0;i<s.size();i++)
+   {
+   	  if(s[i]!=' ')
+   	  {
+   	  	k+=s[i];fl=1;
+   	  }
+   	  else
+   	  {
+   	  	ans=k;
+   	  	k="";fl=0;
+   	  }
+   }
+   if(fl)ans=k;
+   
+   cout<<"The last word is \""<<ans<<"\" with length "<<ans.size()<<"."<<endl;
+}
+
